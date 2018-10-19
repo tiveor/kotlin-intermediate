@@ -32,14 +32,14 @@
         android:text="Work History" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnCallMe"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10sp"
         android:text="CALL ALVARO" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnEmailMe"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10sp"

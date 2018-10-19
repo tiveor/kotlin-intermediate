@@ -1,16 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".WorkHistoryActivity">
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="You Made It"
+        android:padding="10sp"
+        android:text="Work History"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
         tools:layout_editor_absoluteX="176dp"
         tools:layout_editor_absoluteY="291dp" />
-</android.support.constraint.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj asda sdasldkjasldkj " />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
