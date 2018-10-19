@@ -19,10 +19,10 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?android:attr/colorActivatedHighlight"
+        android:layout_height="200sp"
+        android:background="@android:color/darker_gray"
         android:padding="10sp"
-        tools:srcCompat="@tools:sample/avatars[2]" />
+        app:srcCompat="@drawable/me" />
 
     <Button
         android:id="@+id/button"
