@@ -36,7 +36,7 @@ class ListActivity : AppCompatActivity() {
 
                 var lstForeCast = findViewById<ListView>(R.id.lst_forecast)
 
-                var adapter = ArrayAdapter(this@ListActivity, android.R.layout.simple_list_item_1, forecasts)
+                var adapter = ArrayAdapter(this@ListActivity, android.R.layout.simple_list_item_1, forecastStrings)
                 lstForeCast.adapter = adapter
             }
 
@@ -47,6 +47,8 @@ class ListActivity : AppCompatActivity() {
 
         }
 
-        retriever.getForecast(callback)
+        val searchTerm = intent.extras.getString("searchTerm")
+
+        retriever.getForecast(searchTerm, callback)
     }
 }
