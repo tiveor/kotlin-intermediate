@@ -14,28 +14,33 @@ class ListActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list)
 
-        var lstForeCast = findViewById<ListView>(R.id.lst_forecast);
-
-        var weathers = listOf("20C Sunny", "12C Raining", "15C Cool", "2C Cold", "1C Snow")
-
-        var adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, weathers);
-        lstForeCast.adapter = adapter;
-
 
         var retriever = WeatherRetriever()
 
-        val callback = object : Callback<List<Forecast>> {
+        val callback = object : Callback<Weather> {
 
-            override fun onResponse(call: Call<List<Forecast>>, response: Response<List<Forecast>>) {
+            override fun onResponse(call: Call<Weather>, response: Response<Weather>) {
                 println("We got a response")
                 println(response?.body())
 
-                for (forecast in response!!.body()!!) {
-                    println("High:${forecast.high} Low:${forecast.low}")
+                title = response?.body()?.query?.results?.channel?.title
+
+                var forecasts = response?.body()?.query?.results?.channel?.item?.forecast
+                var forecastStrings = mutableListOf<String>()
+
+                if (forecasts != null) {
+                    for (forecast in forecasts) {
+                        forecastStrings.add("${forecast.date} - High: ${forecast.high} Low: ${forecast.low} - ${forecast.text}")
+                    }
                 }
+
+                var lstForeCast = findViewById<ListView>(R.id.lst_forecast)
+
+                var adapter = ArrayAdapter(this@ListActivity, android.R.layout.simple_list_item_1, forecasts)
+                lstForeCast.adapter = adapter
             }
 
-            override fun onFailure(call: Call<List<Forecast>>, t: Throwable) {
+            override fun onFailure(call: Call<Weather>, t: Throwable) {
                 println("It Failed")
                 println(t.message)
             }
